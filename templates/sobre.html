@@ -2,53 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Sobre VOG | Vision Orientation Guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre VOG</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='stayls.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
+
     <div class="container">
-    <h1>Sobre VOG</h1>
 
-    <div class="section">
-    <h2>¿Qué es VOG?</h1>
+        <h1>Sobre VOG</h1>
 
-    <p>
-    VOG es un proyecto tecnológico diseñado para asistir a personas con discapacidad visual
-    mediante herramientas innovadoras que mejoran la movilidad y la seguridad.
-    </p>
+        <div class="section">
+            <h2>🔎 ¿Qué es VOG?</h2>
+            <p>
+                VOG (Vision Orientation Guide) es un dispositivo tecnológico diseñado
+                para asistir a personas con discapacidad visual mediante sensores
+                infrarrojos que detectan obstáculos a diferentes alturas.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>⚠ Problema que resuelve</h2>
+            <p>
+                Muchas herramientas tradicionales detectan obstáculos únicamente
+                a nivel del suelo. Sin embargo, existen riesgos elevados como
+                ramas, señaléticas o estructuras sobresalientes que pueden provocar
+                accidentes. VOG amplía el rango de protección.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Objetivo del proyecto</h2>
+            <p>
+                Desarrollar una solución accesible, portátil y eficiente que
+                proporcione alertas tempranas, mejorando la autonomía,
+                seguridad y confianza del usuario.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🌎 Impacto esperado</h2>
+            <p>
+                Promover inclusión, independencia y mejor calidad de vida
+                mediante tecnología aplicada con enfoque social.
+            </p>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="{{ url_for('index') }}" class="btn">Volver al inicio</a>
+        </div>
+
     </div>
-
-    <div class="section">
-    <h2>Probema que resuelve</h1>
-
-    <p>
-    Las personas con discapacidad visual pueden enfrentar obstáculos y riesgos durante su desplazamiento.
-    VOG busca reducir estos riesgos proporcionando apoyo e información para una navegación más segura.
-    </p>
-    </div>
-
-    <div class="section">
-    <h2>Objetivo del proyecto</h1>
-
-    <p>
-    Desarrollar una solución de asistencia que permita al usuario recibir orientación y alertas,
-    mejorando su autonomía y confianza al desplazarse.
-    </p>
-    </div>
-
-    <div class="section">
-    <h2>Impacto esperado</h1>
-
-    <p>
-    VOG pretende contribuir a la inclusión y accesibilidad, ofreciendo un apoyo tecnológico
-    que facilite la vida diaria de personas con discapacidad visual.
-    </p>
-    </div>
-
-
-    <a href="/" class="btn">Volver al inicio</a>
 
 </body>
 </html>

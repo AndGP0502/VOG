@@ -2,18 +2,228 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>VOG | Asistencia para discapacidad visual</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOG | Tecnología Asistiva</title>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='stayls.css') }}">    
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <h1>VOG</h1>
+    <!-- BARRA SUPERIOR -->
+    <div class="topbar">
+        <p>Proyecto de innovación social | VOG - Vision Orientation Guide</p>
+    </div>
 
-    <p>Proyecto tecnológico de asistencia para personas con discapacidad visual.</p>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">VOG</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#componentes">Componentes</a>
+            <a href="#equipo">Equipo</a>
+        </nav>
+    </header>
 
-    <a href="/sobre" class="btn">Conocer más</a>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+            <h1>¿Qué sentirías si cada paso que dieras fuese un riesgo?</h1>
+
+            <p>
+                Para millones de personas con discapacidad visual,
+                esta es su realidad diaria.
+            </p>
+
+            <p class="hero-frase">
+                La mayor discapacidad de todas es el miedo a ayudar.
+            </p>
+
+            <a href="#sobre" class="btn-primary">Conocer la solución</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='persona.png') }}" alt="Persona con discapacidad visual">
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN SPLIT -->
+    <section class="section-split">
+        <div class="split-image">
+            <img src="{{ url_for('static', filename='movilidad.jpg') }}" alt="Movilidad segura">
+        </div>
+
+        <div class="split-text">
+            <h2>Diseñado para transformar la movilidad</h2>
+
+            <p>
+                VOG integra tecnología y accesibilidad para reducir riesgos,
+                mejorar la orientación y devolver confianza en cada desplazamiento.
+            </p>
+
+            <p>
+                No se trata solo de innovación. Se trata de dignidad,
+                autonomía y seguridad real.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INSPIRACIÓN -->
+    <section class="section-inspiracion">
+
+        <div class="inspiracion-container">
+
+            <!-- TEXTO -->
+            <div class="inspiracion-text fade-left">
+                <h2>La inspiración para VOG</h2>
+
+                <p>
+                    Esta idea no nació en un laboratorio ni en un aula.
+                    Nació en casa.
+                </p>
+
+                <p>
+                    Mi abuelita me enseñó que la verdadera fortaleza no está
+                    en ver el mundo, sino en enfrentarlo con valentía.
+                    Cada paso que daba era un acto de confianza.
+                </p>
+
+                <p>
+                    VOG surge como una promesa: transformar el miedo en seguridad,
+                    y convertir la incertidumbre en autonomía.
+                </p>
+            </div>
+
+            <!-- IMAGEN -->
+            <div class="inspiracion-image fade-right">
+                <img src="{{ url_for('static', filename='abuelita.jpg') }}" alt="Inspiración del proyecto VOG">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE VOG -->
+    <section id="sobre" class="section-light">
+        <div class="container">
+            <h2>Sobre VOG</h2>
+
+            <p>
+                VOG es un proyecto diseñado para asistir a personas con discapacidad visual
+                mediante herramientas tecnológicas innovadoras que mejoran la orientación,
+                la movilidad y la seguridad en su desplazamiento diario.
+            </p>
+
+            <p>
+                Nuestro enfoque combina accesibilidad, funcionalidad y diseño intuitivo
+                para ofrecer una experiencia confiable y eficiente.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================= -->
+<!-- COMPONENTES -->
+<!-- ============================= -->
+<section id="componentes" class="section-components">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>VOG</h2>
+
+        <div class="cards">
+
+            <!-- COMPONENTE 1 -->
+            <div class="card">
+                <img src="{{ url_for('static', filename='dispositivo.jpg') }}" alt="Dispositivo Portátil VOG">
+                
+                
+                <h3>Dispositivo Portátil</h3>
+            </div>
+
+            <!-- Que hace el dispositivo?-->
+            <div class="card">
+                <p>
+                    Detecta obstáculos en tiempo real y emite alertas seguras.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- ============================= -->
+<!-- EQUIPO -->
+<!-- ============================= -->
+<section id="equipo" class="section-team">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Equipo de Desarrollo</h2>
+            <p>
+                Jóvenes comprometidos con la innovación social y la accesibilidad tecnológica.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <!-- MIEMBRO 1 -->
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='integrante1.jpg') }}" alt="André Garzón">
+                <h3>André Garzón</h3>
+                <span>Fundador & Desarrollo</span>
+            </div>
+
+            <!-- MIEMBRO 2 -->
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='integrante2.jpg') }}" alt="Dennys Chanchicocha">
+                <h3>Dennys Chanchicocha</h3>
+                <span>Co‑desarrollador</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 VOG - Proyecto de Innovación Tecnológica</p>
+        <p>Desarrollado con apoyo de Universidad De Las Americas "UDLA"</p>
+    </footer>
+
+    <!-- ANIMACIÓN SCROLL -->
+    <script>
+        const elements = document.querySelectorAll('.fade-left, .fade-right');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+    <!-- NAVBAR PREMIUM SCROLL -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+    </script>
 
 </body>
 </html>
+
+<!--Hasta aqui por hoy broo -->
