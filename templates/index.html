@@ -23,34 +23,25 @@
         <div class="logo">VOG</div>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#sobre">Sobre</a>
+            <a href="#funcionamiento">Funcionamiento</a>
             <a href="#componentes">Componentes</a>
-            <a href="#equipo">Equipo</a>
+            <a href="#equipo">Fundadores</a>
         </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="inicio">
-
         <div class="hero-content">
             <h1>¿Qué sentirías si cada paso que dieras fuese un riesgo?</h1>
-
             <p>
-                Para millones de personas con discapacidad visual,
-                esta es su realidad diaria.
+                Esta es la realidad de millones de personas alrededor del mundo y de más de 500,000 personas solamente en la región sierra del Ecuador.
             </p>
-
-            <p class="hero-frase">
-                La mayor discapacidad de todas es el miedo a ayudar.
-            </p>
-
-            <a href="#sobre" class="btn-primary">Conocer la solución</a>
+            <a href="#funcionamiento" class="btn-primary">Descubre cómo funciona</a>
         </div>
 
         <div class="hero-image">
             <img src="{{ url_for('static', filename='persona.png') }}" alt="Persona con discapacidad visual">
         </div>
-
     </section>
 
     <!-- SECCIÓN SPLIT -->
@@ -58,15 +49,12 @@
         <div class="split-image">
             <img src="{{ url_for('static', filename='movilidad.jpg') }}" alt="Movilidad segura">
         </div>
-
         <div class="split-text">
             <h2>Diseñado para transformar la movilidad</h2>
-
             <p>
                 VOG integra tecnología y accesibilidad para reducir riesgos,
                 mejorar la orientación y devolver confianza en cada desplazamiento.
             </p>
-
             <p>
                 No se trata solo de innovación. Se trata de dignidad,
                 autonomía y seguridad real.
@@ -74,123 +62,156 @@
         </div>
     </section>
 
-    <!-- SECCIÓN INSPIRACIÓN -->
+    <!-- INSPIRACIÓN -->
     <section class="section-inspiracion">
-
         <div class="inspiracion-container">
 
-            <!-- TEXTO -->
-            <div class="inspiracion-text fade-left">
+            <div class="inspiracion-text">
                 <h2>La inspiración para VOG</h2>
-
-                <p>
-                    Esta idea no nació en un laboratorio ni en un aula.
-                    Nació en casa.
-                </p>
-
+                <p>Esta idea no nació en un laboratorio ni en un aula. Nació en casa.</p>
                 <p>
                     Mi abuelita me enseñó que la verdadera fortaleza no está
                     en ver el mundo, sino en enfrentarlo con valentía.
-                    Cada paso que daba era un acto de confianza.
                 </p>
-
                 <p>
-                    VOG surge como una promesa: transformar el miedo en seguridad,
+                    VOG surge como una promesa: transformar el miedo en seguridad
                     y convertir la incertidumbre en autonomía.
                 </p>
             </div>
 
-            <!-- IMAGEN -->
-            <div class="inspiracion-image fade-right">
+            <div class="inspiracion-image">
                 <img src="{{ url_for('static', filename='abuelita.jpg') }}" alt="Inspiración del proyecto VOG">
             </div>
 
         </div>
-
     </section>
 
-    <!-- SOBRE VOG -->
-    <section id="sobre" class="section-light">
+    <!-- FUNCIONAMIENTO -->
+    <section id="funcionamiento" class="feature-hero">
+        <div class="container center-text">
+            <h2>¿Cómo funciona VOG?</h2>
+            <p class="feature-intro">
+                Cuatro pilares tecnológicos que redefinen la movilidad y seguridad.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4 FEATURES -->
+    <section class="feature-section">
+        <div class="feature-text">
+            <span class="feature-number">01</span>
+            <h2>Alertas Inteligentes</h2>
+            <p>
+                Detecta obstáculos y activa alertas inmediatas mediante sonido o vibración.
+            </p>
+        </div>
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='alertas.jpg') }}" alt="Sistema de alertas VOG">
+        </div>
+    </section>
+
+    <section class="feature-section reverse">
+        <div class="feature-text">
+            <span class="feature-number">02</span>
+            <h2>Cámara en Tiempo Real</h2>
+            <p>
+                Mini cámara integrada que transmite imágenes en vivo.
+            </p>
+        </div>
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='camara.jpg') }}" alt="Cámara VOG">
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="feature-text">
+            <span class="feature-number">03</span>
+            <h2>Ubicación GPS en Vivo</h2>
+            <p>
+                Rastreador integrado con ubicación en tiempo real.
+            </p>
+        </div>
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='gps.jpg') }}" alt="Sistema GPS VOG">
+        </div>
+    </section>
+
+    <section class="feature-section reverse">
+        <div class="feature-text">
+            <span class="feature-number">04</span>
+            <h2>Carga Inalámbrica</h2>
+            <p>
+                Sistema de inducción que elimina cables y facilita el uso diario.
+            </p>
+        </div>
+        <div class="feature-image">
+            <img src="{{ url_for('static', filename='carga.jpg') }}" alt="Carga inalámbrica VOG">
+        </div>
+    </section>
+
+    <!-- COMPONENTES -->
+    <section id="componentes" class="section-light">
         <div class="container">
-            <h2>Sobre VOG</h2>
-
+            <h2>Dispositivo Portátil</h2>
+            <img src="{{ url_for('static', filename='dispositivo.jpg') }}" alt="Dispositivo VOG">
             <p>
-                VOG es un proyecto diseñado para asistir a personas con discapacidad visual
-                mediante herramientas tecnológicas innovadoras que mejoran la orientación,
-                la movilidad y la seguridad en su desplazamiento diario.
-            </p>
-
-            <p>
-                Nuestro enfoque combina accesibilidad, funcionalidad y diseño intuitivo
-                para ofrecer una experiencia confiable y eficiente.
+                Diseño ergonómico, intuitivo y accesible.
+                Creado para ofrecer independencia y seguridad real.
             </p>
         </div>
     </section>
 
-    <!-- ============================= -->
-<!-- COMPONENTES -->
-<!-- ============================= -->
-<section id="componentes" class="section-components">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>VOG</h2>
-
-        <div class="cards">
-
-            <!-- COMPONENTE 1 -->
-            <div class="card">
-                <img src="{{ url_for('static', filename='dispositivo.jpg') }}" alt="Dispositivo Portátil VOG">
-                
-                
-                <h3>Dispositivo Portátil</h3>
-            </div>
-
-            <!-- Que hace el dispositivo?-->
-            <div class="card">
-                <p>
-                    Detecta obstáculos en tiempo real y emite alertas seguras.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-    <!-- ============================= -->
-<!-- EQUIPO -->
-<!-- ============================= -->
+    <!-- FUNDADORES -->
 <section id="equipo" class="section-team">
     <div class="container">
 
-        <div class="section-header">
-            <h2>Equipo de Desarrollo</h2>
-            <p>
-                Jóvenes comprometidos con la innovación social y la accesibilidad tecnológica.
-            </p>
-        </div>
+        <h2 class="team-title">Fundadores</h2>
 
         <div class="team-grid">
 
-            <!-- MIEMBRO 1 -->
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='integrante1.jpg') }}" alt="André Garzón">
-                <h3>André Garzón</h3>
-                <span>Fundador & Desarrollo</span>
+            <!-- ANDRÉ -->
+            <div class="team-card" onclick="toggleCard(this)">
+                <div class="card-inner">
+                    <img src="{{ url_for('static', filename='integrante1.jpg') }}" alt="André Garzón">
+                    
+                    <div class="card-info">
+                        <h3>André Garzón</h3>
+                        <span>Fundador & Desarrollo</span>
+                        <p>
+                            Apasionado por la innovación social y el desarrollo tecnológico.
+                            Enfocado en crear soluciones reales que generen impacto.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <!-- MIEMBRO 2 -->
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='integrante2.jpg') }}" alt="Dennys Chanchicocha">
-                <h3>Dennys Chanchicocha</h3>
-                <span>Co‑desarrollador</span>
+            <!-- DENNYS -->
+            <div class="team-card" onclick="toggleCard(this)">
+                <div class="card-inner">
+                    <img src="{{ url_for('static', filename='integrante2.jpg') }}" alt="Dennys Chanchicocha">
+                    
+                    <div class="card-info">
+                        <h3>Dennys Chanchicocha</h3>
+                        <span>Co‑fundador & Co‑desarrollo</span>
+                        <p>
+                            Creativo, analítico y comprometido con la accesibilidad tecnológica.
+                            Siempre enfocado en mejorar la experiencia del usuario.
+                        </p>
+                    </div>
+                </div>
             </div>
 
+        </div>
+
+        <div class="team-button">
+            <a href="galeria.html" class="btn-secondary">
+                Ver más sobre VOG
+            </a>
         </div>
 
     </div>
 </section>
+    
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -198,30 +219,19 @@
         <p>Desarrollado con apoyo de Universidad De Las Americas "UDLA"</p>
     </footer>
 
-    <!-- ANIMACIÓN SCROLL -->
-    <script>
-        const elements = document.querySelectorAll('.fade-left, .fade-right');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-show');
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-
-        elements.forEach(el => observer.observe(el));
-    </script>
-
-    <!-- NAVBAR PREMIUM SCROLL -->
+    <!-- NAVBAR SCROLL -->
     <script>
         window.addEventListener("scroll", function() {
             const navbar = document.querySelector(".navbar");
             navbar.classList.toggle("scrolled", window.scrollY > 50);
         });
     </script>
+
+<script>
+function toggleCard(card) {
+    card.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
