@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería VOG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='galeria.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">VOG</div>
+        <nav>
+            <a href="{{ url_for('index') }}">Inicio</a>
+
+        </nav>
+    </header>
+
+    <!-- HERO GALERÍA -->
+    <section class="galeria-hero">
+        <h1>Galería Oficial VOG</h1>
+        <p>Conoce más de cerca el dispositivo y su desarrollo.</p>
+    </section>
+
+    <!-- GRID DE IMÁGENES -->
+    <section id="fotos" class="galeria-grid">
+
+        <div class="galeria-item">
+            <img src="{{ url_for('static', filename='foto1.jpg') }}" onclick="openLightbox(this)">
+        </div>
+
+        <div class="galeria-item">
+            <img src="{{ url_for('static', filename='foto2.jpg') }}" onclick="openLightbox(this)">
+        </div>
+
+        <div class="galeria-item">
+            <img src="{{ url_for('static', filename='foto3.jpg') }}" onclick="openLightbox(this)">
+        </div>
+
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 VOG - Proyecto de Innovación Tecnológica</p>
+    </footer>
+
+<script>
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -40,14 +40,14 @@
         </div>
 
         <div class="hero-image">
-            <img src="{{ url_for('static', filename='persona.png') }}" alt="Persona con discapacidad visual">
+            <img src="{{ url_for('static', filename='images/david.jpg') }}" alt="Persona con discapacidad visual">
         </div>
     </section>
 
     <!-- SECCIÓN SPLIT -->
     <section class="section-split">
         <div class="split-image">
-            <img src="{{ url_for('static', filename='movilidad.jpg') }}" alt="Movilidad segura">
+            <img src="{{ url_for('static', filename='images/movilidad.jpg') }}" alt="Movilidad segura">
         </div>
         <div class="split-text">
             <h2>Diseñado para transformar la movilidad</h2>
@@ -80,7 +80,7 @@
             </div>
 
             <div class="inspiracion-image">
-                <img src="{{ url_for('static', filename='abuelita.jpg') }}" alt="Inspiración del proyecto VOG">
+                <img src="{{ url_for('static', filename='images/abuelita.jpg') }}" alt="Inspiración del proyecto VOG">
             </div>
 
         </div>
@@ -106,7 +106,7 @@
             </p>
         </div>
         <div class="feature-image">
-            <img src="{{ url_for('static', filename='alertas.jpg') }}" alt="Sistema de alertas VOG">
+            <img src="{{ url_for('static', filename='images/alertas.jpg') }}" alt="Sistema de alertas VOG">
         </div>
     </section>
 
@@ -119,7 +119,7 @@
             </p>
         </div>
         <div class="feature-image">
-            <img src="{{ url_for('static', filename='camara.jpg') }}" alt="Cámara VOG">
+            <img src="{{ url_for('static', filename='images/camara.jpg') }}" alt="Cámara VOG">
         </div>
     </section>
 
@@ -132,7 +132,7 @@
             </p>
         </div>
         <div class="feature-image">
-            <img src="{{ url_for('static', filename='gps.jpg') }}" alt="Sistema GPS VOG">
+            <img src="{{ url_for('static', filename='images/gps.jpg') }}" alt="Sistema GPS VOG">
         </div>
     </section>
 
@@ -145,17 +145,16 @@
             </p>
         </div>
         <div class="feature-image">
-            <img src="{{ url_for('static', filename='carga.jpg') }}" alt="Carga inalámbrica VOG">
+            <img src="{{ url_for('static', filename='images/carga.jpg') }}" alt="Carga inalámbrica VOG">
         </div>
     </section>
 
     <!-- COMPONENTES -->
     <section id="componentes" class="section-light">
         <div class="container">
-            <h2>Dispositivo Portátil</h2>
-            <img src="{{ url_for('static', filename='dispositivo.jpg') }}" alt="Dispositivo VOG">
+            <h2>Dispositivo </h2>
+            <img src="{{ url_for('static', filename='images/dispositivo.jpg') }}" alt="Dispositivo VOG">
             <p>
-                Diseño ergonómico, intuitivo y accesible.
                 Creado para ofrecer independencia y seguridad real.
             </p>
         </div>
@@ -172,7 +171,7 @@
             <!-- ANDRÉ -->
             <div class="team-card" onclick="toggleCard(this)">
                 <div class="card-inner">
-                    <img src="{{ url_for('static', filename='integrante1.jpg') }}" alt="André Garzón">
+                <img src="{{ url_for('static', filename='images/fundador.jpg') }}" alt="André Garzón">
                     
                     <div class="card-info">
                         <h3>André Garzón</h3>
@@ -188,7 +187,7 @@
             <!-- DENNYS -->
             <div class="team-card" onclick="toggleCard(this)">
                 <div class="card-inner">
-                    <img src="{{ url_for('static', filename='integrante2.jpg') }}" alt="Dennys Chanchicocha">
+                    <img src="{{ url_for('static', filename='images/cofundador.jpg') }}" alt="Dennys Chanchicocha">
                     
                     <div class="card-info">
                         <h3>Dennys Chanchicocha</h3>
@@ -203,13 +202,13 @@
 
         </div>
 
-        <div class="team-button">
-            <a href="galeria.html" class="btn-secondary">
-                Ver más sobre VOG
-            </a>
-        </div>
+<div class="gallery-button-container">
+    <a href="{{ url_for('galeria') }}" class="btn-secondary">
+        Ver más sobre VOG
+    </a>
+</div>
 
-    </div>
+
 </section>
     
 
