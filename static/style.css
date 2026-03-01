@@ -179,6 +179,12 @@ h1, h2, h3, .logo {
     margin-bottom: 20px;
 }
 
+.split-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
 /* =====================
    INSPIRACIÓN
 ===================== */
@@ -213,6 +219,13 @@ h1, h2, h3, .logo {
 /* =====================
    FEATURES
 ===================== */
+.feature-hero h2 {
+    font-size: 60px;   /* aquí cambias el tamaño */
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
 .feature-hero {
     padding: 140px 20px 80px;
     text-align: center;
@@ -380,5 +393,47 @@ h1, h2, h3, .logo {
 .gallery-button-container {
     margin-top: 50px;
     text-align: center;
+}
+
+.titulo .title h1 {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* SECCIÓN TÍTULO */
+/* ============================= */
+
+.titulo {
+    width: 100%;
+    padding: 120px 20px 60px 20px;
+    background-color: #f5f7fa;
+
+    display: flex;
+    justify-content: center;   /* centra horizontal */
+    align-items: center;       /* centra vertical si das altura */
+}
+
+.title {
+    width: 100%;
+    text-align: center;        /* centra el texto */
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0d47a1;
+    margin: 0 auto;            /* asegura centrado */
 }
 /*Hasta aquí el código CSS para la página de inicio, mañana seguimos broo!*/
