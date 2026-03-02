@@ -467,4 +467,60 @@ h1, h2, h3, .logo {
     50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
+
+/* ============================= */
+/* 📱 RESPONSIVE PARA CELULAR */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .feature-section,
+    .section-split {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .feature-image img,
+    .split-image img {
+        max-width: 100%;
+    }
+
+    .feature-text h2,
+    .split-text h2 {
+        font-size: 26px;
+    }
+
+    .feature-text p,
+    .split-text p {
+        font-size: 16px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .galeria-item img,
+    .galeria-item video {
+        width: 100%;
+        height: auto;
+    }
+
+    .galeria-hero h1 {
+        font-size: 28px;
+    }
+
+    .galeria-hero p {
+        font-size: 16px;
+    }
+}
+
+
 /*Hasta aquí el código CSS para la página de inicio, mañana seguimos broo!*/
