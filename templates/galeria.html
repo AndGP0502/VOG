@@ -19,36 +19,52 @@
         <div class="logo">VOG</div>
         <nav>
             <a href="{{ url_for('index') }}">Inicio</a>
-
         </nav>
     </header>
 
-    <!-- HERO GALERÍA -->
+    <!-- HERO -->
     <section class="galeria-hero">
-        <h1>Galería Oficial VOG</h1>
-        <p>Conoce más de cerca el dispositivo y su desarrollo.</p>
+        <h1>Galería Bitácora Oficial VOG</h1>
+        <p>Conoce más de cerca el dispositivo y su evolución.</p>
     </section>
 
-    <!-- GRID DE IMÁGENES -->
+    <!-- GRID -->
     <section id="fotos" class="galeria-grid">
 
         <div class="galeria-item">
-            <img src="{{ url_for('static', filename='foto1.jpg') }}" onclick="openLightbox(this)">
+            <img src="{{ url_for('static', filename='imagesG/foto1.jpg') }}" onclick="openLightbox(this)">
         </div>
 
         <div class="galeria-item">
-            <img src="{{ url_for('static', filename='foto2.jpg') }}" onclick="openLightbox(this)">
+            <img src="{{ url_for('static', filename='imagesG/foto2.jpg') }}" onclick="openLightbox(this)">
         </div>
 
         <div class="galeria-item">
-            <img src="{{ url_for('static', filename='foto3.jpg') }}" onclick="openLightbox(this)">
+            <img src="{{ url_for('static', filename='imagesG/foto3.jpg') }}" onclick="openLightbox(this)">
+        </div>
+
+         <!-- VIDEO -->
+        <div class="galeria-item">
+            <video onclick="openLightbox(this)" muted>
+                <source src="{{ url_for('static', filename='imagesG/video1.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+
+        <div class="galeria-item">
+            <img src="{{ url_for('static', filename='imagesG/foto4.jpg') }}" onclick="openLightbox(this)">
+        </div>
+
+        <div class="galeria-item">
+            <img src="{{ url_for('static', filename='imagesG/foto5.jpg') }}" onclick="openLightbox(this)">
         </div>
 
     </section>
 
     <!-- LIGHTBOX -->
-    <div id="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img">
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <div id="lightbox-content"></div>
     </div>
 
     <!-- FOOTER -->
@@ -57,9 +73,28 @@
     </footer>
 
 <script>
-function openLightbox(img) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = img.src;
+function openLightbox(element) {
+
+    const lightbox = document.getElementById("lightbox");
+    const content = document.getElementById("lightbox-content");
+
+    content.innerHTML = "";
+
+    if (element.tagName === "IMG") {
+        const img = document.createElement("img");
+        img.src = element.src;
+        content.appendChild(img);
+    } 
+    else if (element.tagName === "VIDEO") {
+        const video = document.createElement("video");
+        video.src = element.querySelector("source").src;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.maxHeight = "80vh";
+        content.appendChild(video);
+    }
+
+    lightbox.style.display = "flex";
 }
 
 function closeLightbox() {

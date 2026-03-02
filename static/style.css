@@ -441,4 +441,30 @@ h1, h2, h3, .logo {
     color: #0d47a1;
     margin: 0 auto;            /* asegura centrado */
 }
+
+.click-info {
+    display: inline-block;
+    margin: 20px auto 60px;
+    padding: 12px 25px;
+    background-color: rgba(13, 71, 161, 0.08);
+    color: #0d47a1;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.section-team {
+    text-align: center;
+}
+
+.click-info {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
 /*Hasta aquí el código CSS para la página de inicio, mañana seguimos broo!*/
