@@ -642,6 +642,20 @@ h1, h2, h3, .logo {
         max-width: 400px;
     }
 
+    /* FIX REAL PARA INSPIRACIÓN */
+    .section-inspiracion {
+        padding: 80px 20px;
+    }
+    
+    .inspiracion-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .inspiracion-text {
+        width: 100%;
+        max-width: 100%;
+    }
     
 
     }
