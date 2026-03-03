@@ -479,71 +479,6 @@ h1, h2, h3, .logo {
 
 @media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .feature-section,
-    .section-split {
-        flex-direction: column;
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .feature-image img,
-    .split-image img {
-        max-width: 100%;
-    }
-
-    .feature-text h2,
-    .split-text h2 {
-        font-size: 26px;
-    }
-
-    .feature-text p,
-    .split-text p {
-        font-size: 16px;
-    }
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .galeria-item img,
-    .galeria-item video {
-        width: 100%;
-        height: auto;
-    }
-
-    .galeria-hero h1 {
-        font-size: 28px;
-    }
-
-    .galeria-hero p {
-        font-size: 16px;
-    }
-}
-
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px;
-}
-
-.galeria-item img,
-.galeria-item video {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-
     /* NAVBAR */
     .navbar {
         flex-direction: column;
@@ -583,7 +518,7 @@ h1, h2, h3, .logo {
         gap: 30px;
     }
 
-    /* TEXTO BIEN ALINEADO */
+    /* TEXTO */
     .feature-text,
     .split-text,
     .inspiracion-text {
@@ -594,7 +529,7 @@ h1, h2, h3, .logo {
     .split-text h2,
     .inspiracion-text h2 {
         font-size: 26px;
-        text-align: center; /* solo títulos centrados */
+        text-align: center;
     }
 
     .feature-text p,
@@ -605,12 +540,22 @@ h1, h2, h3, .logo {
         text-align: justify;
     }
 
-    /* IMÁGENES MÁS GRANDES */
+    /* IMÁGENES */
     .feature-image img,
     .split-image img,
     .inspiracion-image img {
         width: 100%;
         max-width: 100%;
+    }
+
+    /* 🔥 FIX REAL PARA INSPIRACIÓN */
+    .inspiracion-text {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .section-inspiracion {
+        padding: 80px 20px;
     }
 
     /* GALERÍA */
@@ -623,42 +568,7 @@ h1, h2, h3, .logo {
     .galeria-item video {
         height: 200px;
     }
-
-    
-    /* INSPIRACIÓN IGUAL QUE SPLIT EN CELULAR */
-    .inspiracion-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    
-    .inspiracion-text {
-        max-width: 600px;   /* igual que split */
-        width: 100%;
-    }
-    
-    .inspiracion-image img {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* FIX REAL PARA INSPIRACIÓN */
-    .section-inspiracion {
-        padding: 80px 20px;
-    }
-    
-    .inspiracion-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .inspiracion-text {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-
-    }
+}
 
 @media (max-width: 480px) {
 
