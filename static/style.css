@@ -1,4 +1,3 @@
-
 /* =====================
    RESET
 ===================== */
@@ -305,6 +304,7 @@ h1, h2, h3, .logo {
     width: 320px;
     height: 420px;
     cursor: pointer;
+    perspective: 1000px;
 }
 
 .card-inner {
@@ -321,6 +321,7 @@ h1, h2, h3, .logo {
     transition: transform 0.4s ease;
 }
 
+/* INFORMACIÓN OCULTA */
 .card-info {
     position: absolute;
     inset: 0;
@@ -328,6 +329,7 @@ h1, h2, h3, .logo {
     color: white;
     padding: 40px 25px;
     border-radius: 14px;
+
     opacity: 0;
     transform: translateY(100%);
     transition: 0.5s ease;
@@ -335,8 +337,10 @@ h1, h2, h3, .logo {
     flex-direction: column;
     text-align: justify;
     justify-content: space-between;
+    text-align: justify;
 }
 
+/* CUANDO SE ACTIVA */
 .team-card.active img {
     transform: scale(1.05);
 }
@@ -522,5 +526,119 @@ h1, h2, h3, .logo {
         font-size: 16px;
     }
 }
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria-item img,
+.galeria-item video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 140px 20px 60px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        height: auto;
+        width: 90%;
+        max-width: 350px;
+        margin-top: 30px;
+    }
+
+    /* SECCIONES FLEX */
+    .feature-section,
+    .section-split,
+    .inspiracion-container {
+        flex-direction: column;
+        padding: 70px 20px;
+        gap: 30px;
+    }
+
+    /* TEXTO BIEN ALINEADO */
+    .feature-text,
+    .split-text,
+    .inspiracion-text {
+        text-align: justify;
+    }
+
+    .feature-text h2,
+    .split-text h2,
+    .inspiracion-text h2 {
+        font-size: 26px;
+        text-align: center; /* solo títulos centrados */
+    }
+
+    .feature-text p,
+    .split-text p,
+    .inspiracion-text p {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    /* IMÁGENES MÁS GRANDES */
+    .feature-image img,
+    .split-image img,
+    .inspiracion-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* GALERÍA */
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .galeria-item img,
+    .galeria-item video {
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item img,
+    .galeria-item video {
+        height: 220px;
+    }
+
+
+
+} 
 
 /*Hasta aquí el código CSS para la página de inicio, mañana seguimos broo!*/
