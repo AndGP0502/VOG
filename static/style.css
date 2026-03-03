@@ -623,6 +623,24 @@ h1, h2, h3, .logo {
     .galeria-item video {
         height: 200px;
     }
+
+    /* INSPIRACIÓN MÁS ESTÉTICA EN CELULAR */
+    .inspiracion-text {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .inspiracion-text p {
+        text-align: left;          /* más natural en móvil */
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .inspiracion-text p:first-child {
+        font-weight: 600;
+        font-size: 18px;
+    }
 }
 
 
