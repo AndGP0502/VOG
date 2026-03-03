@@ -626,15 +626,14 @@ h1, h2, h3, .logo {
 
     /* INSPIRACIÓN MÁS ESTÉTICA EN CELULAR */
     .inspiracion-text {
-        max-width: 90%;
+        max-width: 75%;
         margin: 0 auto;
     }
     
     .inspiracion-text p {
-        text-align: left;          /* más natural en móvil */
+        text-align: left;
         font-size: 17px;
         line-height: 1.8;
-        margin-bottom: 20px;
     }
 
     .inspiracion-text p:first-child {
