@@ -624,23 +624,23 @@ h1, h2, h3, .logo {
         height: 200px;
     }
 
-    /* INSPIRACIÓN MÁS ESTÉTICA EN CELULAR */
-    .inspiracion-text {
-        max-width: 75%;
-        margin: 0 auto;
+    
+    /* INSPIRACIÓN IGUAL QUE SPLIT EN CELULAR */
+    .inspiracion-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
     
-    .inspiracion-text p {
-        text-align: left;
-        font-size: 17px;
-        line-height: 1.8;
+    .inspiracion-text {
+        max-width: 600px;   /* igual que split */
+        width: 100%;
     }
-
-    .inspiracion-text p:first-child {
-        font-weight: 600;
-        font-size: 18px;
+    
+    .inspiracion-image img {
+        width: 100%;
+        max-width: 400px;
     }
-}
 
 
 @media (max-width: 480px) {
