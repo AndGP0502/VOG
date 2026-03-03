@@ -38,7 +38,7 @@ h1, h2, h3, .logo {
 }
 
 /* =====================
-   NAVBAR PREMIUM
+   NAVBAR
 ===================== */
 .navbar {
     position: fixed;
@@ -89,8 +89,8 @@ h1, h2, h3, .logo {
    HERO
 ===================== */
 .hero {
-    height: 100vh;
-    padding: 120px 100px 0 100px;
+    min-height: 100vh;
+    padding: 140px 100px 80px 100px;
     background: linear-gradient(rgba(0,0,0,0.85), rgba(13,71,161,0.85)),
     url("../static/hero.jpg") center/cover no-repeat;
     display: flex;
@@ -114,7 +114,9 @@ h1, h2, h3, .logo {
 }
 
 .hero-image img {
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     object-fit: contain;
 }
 
@@ -147,75 +149,39 @@ h1, h2, h3, .logo {
 }
 
 .btn-secondary:hover {
-    background: #e3f2fd;
-    color: #0d47a1;
+    background: #1565c0;
     transform: translateY(-3px);
 }
 
 /* =====================
-   SPLIT SECTION
+   SECCIONES FLEX
 ===================== */
-.section-split {
+.section-split,
+.feature-section,
+.inspiracion-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px 100px;
     gap: 60px;
 }
 
-.split-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
+.section-split,
+.feature-section {
+    padding: 120px 100px;
 }
 
-.split-text {
-    max-width: 600px;
-}
-
-.split-text h2 {
-    font-size: 36px;
-    color: #0d47a1;
-    margin-bottom: 20px;
-}
-
-.split-text p {
-    font-size: 18px;
-    line-height: 1.9;
-    margin-bottom: 25px;
-    text-align: justify;
-    hyphens: auto;
-}
-
-/* =====================
-   INSPIRACIÓN
-===================== */
 .section-inspiracion {
     padding: 140px 100px;
     background: #f8fafc;
 }
 
-.inspiracion-container {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.inspiracion-text h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-.inspiracion-text p {
-    font-size: 18px;
-    text-align: justify;
-    line-height: 1.9;
-    margin-bottom: 15px;
-    hyphens: auto;
-}
-
+/* Imágenes adaptables */
+.split-image img,
+.feature-image img,
 .inspiracion-image img {
-    max-width: 450px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
@@ -223,57 +189,15 @@ h1, h2, h3, .logo {
 /* =====================
    FEATURES
 ===================== */
-.feature-hero h2 {
-    font-size: 60px;   /* aquí cambias el tamaño */
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
 .feature-hero {
     padding: 140px 20px 80px;
     text-align: center;
 }
 
-.feature-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 140px 100px;
-    gap: 80px;
-}
-
-.feature-section.reverse {
-    flex-direction: row-reverse;
-}
-
-.feature-number {
-    font-size: 80px;
+.feature-hero h2 {
+    font-size: 60px;
     font-weight: 700;
-    color: rgba(13,71,161,0.08);
-    margin-bottom: 20px;
-}
-
-.feature-text h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #0d47a1;
-}
-
-.feature-text p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.feature-image img {
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-    transition: 0.6s;
-}
-
-.feature-image img:hover {
-    transform: scale(1.04);
+    color: #000;
 }
 
 /* =====================
@@ -304,6 +228,7 @@ h1, h2, h3, .logo {
     width: 320px;
     height: 420px;
     cursor: pointer;
+    perspective: 1000px;
 }
 
 .card-inner {
@@ -320,6 +245,7 @@ h1, h2, h3, .logo {
     transition: transform 0.4s ease;
 }
 
+/* INFORMACIÓN OCULTA */
 .card-info {
     position: absolute;
     inset: 0;
@@ -327,15 +253,18 @@ h1, h2, h3, .logo {
     color: white;
     padding: 40px 25px;
     border-radius: 14px;
+
     opacity: 0;
     transform: translateY(100%);
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
+
     display: flex;
     flex-direction: column;
-    text-align: justify;
     justify-content: space-between;
+    text-align: justify;
 }
 
+/* CUANDO SE ACTIVA */
 .team-card.active img {
     transform: scale(1.05);
 }
@@ -345,8 +274,22 @@ h1, h2, h3, .logo {
     transform: translateY(0);
 }
 
-.team-button {
-    margin-top: 70px;
+/* =====================
+   GALERÍA
+===================== */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria-item img,
+.galeria-item video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* =====================
@@ -359,9 +302,9 @@ h1, h2, h3, .logo {
     padding: 40px;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* =============================
+   📱 RESPONSIVE
+============================= */
 @media (max-width: 900px) {
 
     .hero,
@@ -378,118 +321,24 @@ h1, h2, h3, .logo {
     }
 }
 
-.btn-secondary {
-    display: inline-block;
-    background-color: #0d47a1;
-    color: #ffffff;
-    padding: 14px 35px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.btn-secondary:hover {
-    background-color: #1565c0;
-    transform: translateY(-3px);
-}
-
-.gallery-button-container {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.titulo .title h1 {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============================= */
-/* SECCIÓN TÍTULO */
-/* ============================= */
-
-.titulo {
-    width: 100%;
-    padding: 120px 20px 60px 20px;
-    background-color: #f5f7fa;
-
-    display: flex;
-    justify-content: center;   /* centra horizontal */
-    align-items: center;       /* centra vertical si das altura */
-}
-
-.title {
-    width: 100%;
-    text-align: center;        /* centra el texto */
-}
-
-.titulo h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #0d47a1;
-    margin: 0 auto;            /* asegura centrado */
-}
-
-.click-info {
-    display: inline-block;
-    margin: 20px auto 60px;
-    padding: 12px 25px;
-    background-color: rgba(13, 71, 161, 0.08);
-    color: #0d47a1;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.section-team {
-    text-align: center;
-}
-
-.click-info {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-    100% { transform: scale(1); }
-}
-
-/* ============================= */
-/* 📱 RESPONSIVE PARA CELULAR */
-/* ============================= */
-
 @media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
+    .hero {
+        min-height: auto;
+        padding: 140px 20px 60px 20px;
     }
 
-    .feature-section,
-    .section-split {
-        flex-direction: column;
-        padding: 60px 20px;
-        text-align: center;
+    .hero h1 {
+        font-size: 32px;
     }
 
-    .feature-image img,
-    .split-image img {
-        max-width: 100%;
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-width: 350px;
+        margin-top: 30px;
     }
 
     .feature-text h2,
@@ -503,24 +352,57 @@ h1, h2, h3, .logo {
     }
 
     .galeria-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .galeria-item img,
     .galeria-item video {
-        width: 100%;
-        height: auto;
-    }
-
-    .galeria-hero h1 {
-        font-size: 28px;
-    }
-
-    .galeria-hero p {
-        font-size: 16px;
+        height: 200px;
     }
 }
 
+@media (max-width: 480px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item img,
+    .galeria-item video {
+        height: 220px;
+    }
+}
+
+/* ============================= */
+/* MENSAJE CLICK ANIMADO */
+/* ============================= */
+
+.click-info {
+    display: inline-block;
+    margin: 20px auto 60px;
+    padding: 12px 25px;
+    background-color: rgba(13, 71, 161, 0.08);
+    color: #0d47a1;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    text-align: center;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(13,71,161,0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(13,71,161,0.25);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(13,71,161,0.2);
+    }
+}
 
 /*Hasta aquí el código CSS para la página de inicio, mañana seguimos broo!*/

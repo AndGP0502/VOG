@@ -54,11 +54,14 @@
 
          <!-- VIDEO -->
         <div class="galeria-item">
-            <video onclick="openLightbox(this)" muted>
-                <source src="{{ url_for('static', filename='imagesG/video1.mp4') }}" type="video/mp4">
-            </video>
-        </div>
-
+            <video 
+              controls 
+              playsinline 
+              poster="{{ url_for('static', filename='imagesG/foto_preview.jpg') }}">
+        
+               <source src="{{ url_for('static', filename='imagesG/video1.mp4') }}" type="video/mp4">
+            </video> 
+       </div>
 
         <div class="galeria-item">
             <img src="{{ url_for('static', filename='imagesG/foto4.jpg') }}" onclick="openLightbox(this)">
