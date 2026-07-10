@@ -15,4 +15,5 @@ Arduino · Sensores ultrasónicos · Programación de microcontroladores
 
 ## Cómo ejecutarlo
 
-1. Clonar el repositorio:
+1. Clonar el repositorio
+2. Ejecutar el localhost
